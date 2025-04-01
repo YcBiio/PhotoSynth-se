@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #2e8b57;
+    text-align: center;
+}
+
+.container {
+    width: 800px;
+    height: 500px;
+    position: relative;
+    background-color: #e6f7ff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.sun {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ffd700;
+    position: absolute;
+    top: -20px;
+    left: 140px;
+    box-shadow: 0 0 30px #ffff00;
+    animation: sunshine 5s infinite alternate;
+}
+
+.plant {
+    width: 120px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 340px;
+    z-index: 10;
+}
+
+.stem {
+    width: 20px;
+    height: 200px;
+    background-color: #3cb371;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+.leaf {
+    width: 100px;
+    height: 50px;
+    background-color: #2e8b57;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 5;
+}
+
+.leaf1 {
+    transform: rotate(-15deg);
+    bottom: 150px;
+    left: 30px;
+}
+
+.leaf2 {
+    transform: rotate(15deg);
+    bottom: 100px;
+    left: -20px;
+}
+
+.soil {
+    width: 100%;
+    height: 100px;
+    background-color: #8b4513;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.light-ray {
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0.3);
+    width: 5px;
+    height: 150px;
+    transform-origin: top;
+    animation: lightMovement 3s infinite;
+    z-index: 2;
+}
+
+.molecule {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    z-index: 3;
+}
+
+.water {
+    background-color: #1e90ff;
+    bottom: 80px;
+    left: 100px;
+    animation: waterMovement 10s infinite;
+}
+
+.co2 {
+    background-color: #808080;
+    top: 100px;
+    right: 100px;
+    animation: co2Movement 8s infinite;
+}
+
+.oxygen {
+    background-color: #00ffff;
+    top: 150px;
+    left: 400px;
+    animation: oxygenMovement 12s infinite;
+}
+
+.glucose {
+    background-color: #ffcc00;
+    bottom: 50px;
+    left: 350px;
+    animation: glucoseMovement 15s infinite;
+}
+
+.control-panel {
+    width: 800px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#info-panel {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.chloroplast {
+    width: 30px;
+    height: 15px;
+    background-color: #90ee90;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    z-index: 6;
+}
+
+#phase-title {
+    font-size: 24px;
+    color: #2e8b57;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Animations */
+@keyframes sunshine {
+    0% { box-shadow: 0 0 30px #ffff00; }
+    100% { box-shadow: 0 0 60px #ffff00; }
+}
+
+@keyframes lightMovement {
+    0% { opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+
+@keyframes waterMovement {
+    0% { opacity: 0; left: 100px; bottom: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; left: 360px; bottom: 120px; }
+}
+
+@keyframes co2Movement {
+    0% { opacity: 0; right: 100px; top: 100px; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; right: 400px; top: 150px; }
+}
+
+@keyframes oxygenMovement {
+    0% { opacity: 0; left: 350px; top: 150px; }
+    20% { opacity: 0; }
+    30% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; left: 500px; top: 50px; }
+}
+
+@keyframes glucoseMovement {
+    0% { opacity: 0; left: 350px; bottom: 120px; }
+    30% { opacity: 0; }
+    40% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; left: 350px; bottom: 50px; }
+}
+
+@keyframes blink {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}

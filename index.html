@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation de la Photosynthèse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Animation de la Photosynthèse</h1>
+    
+    <div class="container" id="animation-container">
+        <div class="sun"></div>
+        <div class="soil"></div>
+        <div class="plant">
+            <div class="stem"></div>
+            <div class="leaf leaf1"></div>
+            <div class="leaf leaf2"></div>
+        </div>
+        
+        <!-- Light rays will be added by JavaScript -->
+        
+        <div class="molecule water" id="water1"></div>
+        <div class="molecule water" id="water2"></div>
+        <div class="molecule co2" id="co2-1"></div>
+        <div class="molecule co2" id="co2-2"></div>
+        <div class="molecule oxygen" id="oxygen1"></div>
+        <div class="molecule oxygen" id="oxygen2"></div>
+        <div class="molecule glucose" id="glucose1"></div>
+    </div>
+    
+    <div class="control-panel">
+        <div id="phase-title">Phase de la photosynthèse</div>
+        <button id="phase1-btn">Phase 1: Absorption de la lumière</button>
+        <button id="phase2-btn">Phase 2: Phase claire</button>
+        <button id="phase3-btn">Phase 3: Cycle de Calvin</button>
+        <button id="all-phases-btn">Toutes les phases</button>
+        <div id="info-panel">
+            Cliquez sur un bouton pour voir les différentes phases de la photosynthèse.
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
